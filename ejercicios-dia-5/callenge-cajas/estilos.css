@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.contenedor {
+  text-align: center;
+}
+
+/* Estilos generales de las cajas */
+.caja {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+/* Caja 1 */
+.caja1 {
+  background-color: #3498db;
+  border: 5px solid #2980b9;
+  box-sizing: content-box; /* tamaño aumenta con padding + border */
+}
+
+/* Caja 2 - circular */
+.caja2 {
+  background-color: #e74c3c;
+  border: 8px dashed #c0392b;
+  border-radius: 50%;
+  box-sizing: border-box; /* respeta el tamaño definido */
+}
+
+/* Caja 3 - ocupa toda la fila */
+.caja3 {
+  display: block;
+  background-color: #2ecc71;
+  border: 4px dotted #27ae60;
+  box-sizing: border-box;
+  width: 90%; /* ocupa casi toda la pantalla */
+  margin: 20px auto;
+}

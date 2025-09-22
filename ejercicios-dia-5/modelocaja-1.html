@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borederbox vs content box</title>
+    <style>
+        .caja{
+            width: 200px;
+            padding: 20px;
+            border: 5px solid red;
+            margin: 10px;
+            background-color: lightgray;
+
+        }
+        .content-box{
+            box-sizing: content-box;
+
+        }
+        .border-box{
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="caja content-box">Content-box</div>
+    <div class="caja border-box">Border-box</div>
+
+
+    
+</body>
+</html>
