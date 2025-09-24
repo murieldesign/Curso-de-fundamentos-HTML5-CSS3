@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Challenge Dashboard Resuelto</title>
+<link href="estilos.css" rel="stylesheet">
+</head>
+<body lang="en">
+
+<h1>Super Challenge Dashboard</h1>
+
+<!-- Botón para cambiar tema -->
+<button id="toggleTheme">Cambiar Tema</button>
+
+<!-- Selector de color principal -->
+<label for="mainColor">Color principal:</label>
+<input type="color" id="mainColor" value="#3498db">
+
+<!-- Dashboard -->
+<div class="dashboard">
+  <div class="card">
+    <h2>Card 1</h2>
+    <p>Contenido de la tarjeta 1. <a href="https://example.com">Enlace externo</a></p>
+  </div>
+  <div class="card">
+    <h2>Card 2</h2>
+    <p>Contenido de la tarjeta 2. <a href="https://example.com">Enlace externo</a></p>
+  </div>
+  <div class="card">
+    <h2>Card 3</h2>
+    <p>Contenido de la tarjeta 3. <a href="https://example.com">Enlace externo</a></p>
+  </div>
+</div>
+
+<script>
+  // -------------------------------
+  // CAMBIO DE TEMA
+  // -------------------------------
+  const toggleButton = document.getElementById('toggleTheme');
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  // -------------------------------
+  // CAMBIO DE COLOR PRINCIPAL EN VIVO
+  // -------------------------------
+  const colorPicker = document.getElementById('mainColor');
+  colorPicker.addEventListener('input', (e) => {
+    document.documentElement.style.setProperty('--primary-color', e.target.value);
+  });
+</script>
+
+</body>
+</html>

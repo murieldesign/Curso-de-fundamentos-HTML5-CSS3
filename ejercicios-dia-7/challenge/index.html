@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard con Variables CSS</title>
+<link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>Dashboard con Variables CSS</h1>
+
+<button id="toggleTheme">Cambiar Tema</button>
+
+<div class="dashboard">
+  <div class="card">
+    <h2>Card 1</h2>
+    <p>Contenido de la tarjeta 1.</p>
+  </div>
+  <div class="card">
+    <h2>Card 2</h2>
+    <p>Contenido de la tarjeta 2.</p>
+  </div>
+  <div class="card">
+    <h2>Card 3</h2>
+    <p>Contenido de la tarjeta 3.</p>
+  </div>
+</div>
+
+<script>
+  // Cambiar tema oscuro / claro
+  const toggleButton = document.getElementById('toggleTheme');
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
+</body>
+</html>
+
