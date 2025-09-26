@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* Base Mobile First */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+/* Header y Footer */
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #333;
+  color: white;
+}
+
+/* Proyectos - Mobile: 1 columna */
+.projects {
+  text-align: center; /* ayuda a centrar inline-block después */
+}
+
+.project {
+  display: block; /* por defecto en mobile */
+  width: 100%;
+  background: lightblue;
+  padding: 2rem;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Hover opcional */
+.project:hover {
+  transform: scale(1.05);
+  background: deepskyblue;
+  color: white;
+}
+
+/* Tablet: desde 600px → 2 columnas */
+@media (min-width: 600px) {
+  .project {
+    display: inline-block;
+    width: 48%; /* 2 columnas con espacio entre ellas */
+    margin: 0 1% 1rem 1%;
+    vertical-align: top;
+  }
+}
+
+/* Desktop: desde 900px → 3 columnas */
+@media (min-width: 900px) {
+  html {
+    font-size: 12px; /* tipografía un poco más grande */
+  }
+
+  .project {
+    width: 30%; /* 3 columnas */
+    margin: 0 1% 1rem 1%;
+  }
+}
