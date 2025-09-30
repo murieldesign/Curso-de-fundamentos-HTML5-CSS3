@@ -1,0 +1,65 @@
+/* Layout principal */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main"
+    "footer footer footer";
+  gap: 20px;
+  min-height: 100vh;
+}
+
+/* Áreas */
+header { grid-area: header; background: #3498db; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px; }
+aside { grid-area: sidebar; background: #2ecc71; color: white; padding: 15px; }
+main { grid-area: main; display: flex; flex-direction: column; gap: 20px; }
+footer { grid-area: footer; background: #95a5a6; color: white; text-align: center; padding: 10px; }
+
+/* Sidebar */
+aside ul { list-style: none; padding: 0; }
+aside li { margin: 10px 0; }
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.card { background: #f39c12; padding: 20px; text-align: center; }
+
+/* Tabla */
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.table th {
+  background: #34495e;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

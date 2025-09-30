@@ -1,0 +1,39 @@
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "header header" "nav nav" "sidebar main" "footer footer";
+  gap: 20px;
+  min-height: 100vh;
+}
+
+header { grid-area: header; background: lightblue; }
+nav { grid-area: nav; background: lightgreen; }
+aside { grid-area: sidebar; background: lightcoral; }
+main { 
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:10px;
+ 
+}
+main article { background: peachpuff; padding: 10px; }
+footer { grid-area: footer; background: lightgray; }
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .blog {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "sidebar"
+    "footer"
+    ;
+    
+  }
+  main {
+    grid-template-columns: 1fr;
+   
+} 
+}
