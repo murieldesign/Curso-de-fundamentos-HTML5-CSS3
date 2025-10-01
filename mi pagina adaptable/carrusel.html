@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes Responsivas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow: hidden; /* Evita scroll innecesario */
+            transition: height 0.5s ease-in-out; /* Transición suave */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    
+    <div class="contenedor" id="contenedor">
+        <img id="imagen" src="https://www.ijwhite.com/wp-content/uploads/2017/05/placeholder-800x400.jpeg" alt="Imagen Horizontal">
+    </div>
+
+    <button onclick="mostrarVertical()">Mostrar Imagen Vertical</button>
+  
+    <script>
+        let img = document.getElementById("imagen");
+        let contenedor = document.getElementById("contenedor");
+
+        function ajustarAltura() {
+            contenedor.style.height = img.clientHeight + "px";
+        }
+
+        // Ajustar la altura cuando la imagen cargue
+        img.onload = ajustarAltura;
+
+        // Simulación: Cambio de imagen después de 3s (puedes eliminar esta parte)
+        setTimeout(() => {
+            img.src = "https://images.pexels.com/photos/433989/pexels-photo-433989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        }, 3000);
+
+        // Ajustar la altura si la imagen cambia
+        img.addEventListener("load", ajustarAltura);
+    </script>
+</body>
+</html>
