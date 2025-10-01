@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de escribir</title>
+    <style>
+        .typing{
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid black;
+            font-family: monospace;
+            font-size: 24px;
+            animation: escribir 4s steps(30,end) forwards, parpadeo 0.7s infinite ;
+        }
+        @keyframes escribir{
+            from{width: 0;}
+            to{width:100%;}
+        }
+        @keyframes parpadeo {
+            50%{border-color: transparent;}
+        }
+    </style>
+</head>
+<body>
+    <h2 class="typing">Aprendiendo Animaciones en CSS...</h2>
+
+</body>
+</html>
